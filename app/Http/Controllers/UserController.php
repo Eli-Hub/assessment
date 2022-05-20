@@ -16,7 +16,7 @@ class UserController extends Controller
         $name = readline("Username: ");
         $role = readline("User Role: ");
         $email = readline("Email: ");
-        User::where('name', '=', $name)->orwhere('role', '=', $role)->orwhere('email', '=', $email);
+        User::where('name', '=', $name)->orwhere('role', '=', $role)->orwhere('email', '=', $email)->get();
 
         return $this->filterUsers();
     }
